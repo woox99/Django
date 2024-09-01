@@ -71,9 +71,13 @@
     py manage.py makemigrations
     py manage.py migrate
 
+    py manage.py shell
+
+#### Testing
+    
     py manage.py test
 
-    py manage.py shell
+    pip install Coverage
 
 #### Requirments
 

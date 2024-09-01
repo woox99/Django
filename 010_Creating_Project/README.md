@@ -46,7 +46,7 @@
 
     urlpatterns = [
         path("admin/", admin.site.urls),
-        path('app/', include('app.urls')), # add pattern here
+        path('', include('app.urls')), # add pattern here
     ]
     ```
 
