@@ -77,6 +77,10 @@
     py manage.py test
 
     pip install Coverage
+    coverage run --omit='*/venv/*' manage.py test
+    coverage run manage.py test
+    coverage html
+    coverage report
 
 #### Requirments
 
