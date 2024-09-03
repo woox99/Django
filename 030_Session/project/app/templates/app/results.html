@@ -1,0 +1,18 @@
+<!-- results.html file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Book was successfully saved in session!</h3>
+    <p>Title: {{book.title}}</p>
+    <p>Publisher: {{book.publisher}}</p>
+    <p>Author: {{book.author}}</p>
+
+    <br>
+    <button><a href="{% url 'app:clear-session' %}">Clear Session</a></button>
+</body>
+</html>
