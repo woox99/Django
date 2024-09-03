@@ -6,18 +6,17 @@
 * Creating Django Project
     * App Configuration
     * Starting Development Server
-* Basics
-    * Templates & DTL
+* Forms
     * Views
     * URL Patterns
+    * Templates
+    * DTL Variables
+* Session Management
 * Request Handling
     * URL Parameters (Path Variables)
     * Query Parameters
-* Session Management and Caching
 * Styling
     * Load Static
-* Forms
-    * csrf tokens
 * CRUD
     * Models
     * SQLite
