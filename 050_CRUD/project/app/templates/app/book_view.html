@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Title: {{book}}</h1>
+    <h3>Publisher: {{book.publisher}}</h3>
+    <h3>Author: {{book.author}}</h3>
+
+    <a href="{% url 'app:book-list' %}"><button>All Books</button></a>
+    <a href="{% url 'app:delete-book' book.pk %}">DELETE</a>
+    <a href="{% url 'app:edit-book' book.pk %}">EDIT</a>
+</body>
+</html>
