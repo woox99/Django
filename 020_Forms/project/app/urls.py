@@ -5,5 +5,4 @@ app_name = 'app'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('confirmation/', views.confirmation, name='confirmation'),
 ]
