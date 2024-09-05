@@ -1,4 +1,4 @@
-# Index
+# Lesson Index
 * Getting Started and Installation
     * Overview
     * Prerequisites
@@ -15,23 +15,21 @@
 * Request Handling
     * URL Parameters (Path Variables)
     * Query Parameters
-* Styling
-    * Load Static
 * CRUD
     * Models
     * SQLite
     * DB Browser
     * Shell
-* Authetication
-    * Validation
-* Testing
-    * Populating database with fake data (faker)
-    * Coverage
+
 * Related Objects ORM
     * OneToOne
     * OneToMany
     * ManyToMany
     * get_absolute_url
+* Styling
+    * Load Static
+* Authetication
+    * Validation
 * Multi App Project
 * Built-in Users
 * Built-in Admin and Authorization
@@ -41,6 +39,9 @@
     * Generic Views
 * Template Inheritance
     * Django Template Language (revisit)
+* Testing
+    * Populating database with fake data (faker)
+    * Coverage
 * API
     * Django REST Framework
     * Connecting React

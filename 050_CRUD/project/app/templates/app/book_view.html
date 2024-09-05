@@ -11,7 +11,7 @@
     <h3>Author: {{book.author}}</h3>
 
     <a href="{% url 'app:book-list' %}"><button>All Books</button></a>
-    <a href="{% url 'app:delete-book' book.pk %}">DELETE</a>
-    <a href="{% url 'app:edit-book' book.pk %}">EDIT</a>
+    <a href="{% url 'app:book-delete' book.pk %}">DELETE</a>
+    <a href="{% url 'app:book-update' book.pk %}">EDIT</a>
 </body>
 </html>

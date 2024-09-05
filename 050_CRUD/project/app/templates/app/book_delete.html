@@ -7,7 +7,7 @@
 </head>
 <body>
     <h3>Are you sure you want to delete <strong>{{book}}?</strong></h3>
-    <form action="{% url 'app:delete-book' book.pk %}" method="POST">
+    <form action="{% url 'app:book-delete' book.pk %}" method="POST">
         {% csrf_token %}
         <input type="submit" value="DELETE">
         <a href="{% url 'app:book-view' book.pk %}">Cancle</a>
