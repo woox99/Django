@@ -25,20 +25,21 @@
     * OneToMany
     * ManyToMany
     * get_absolute_url 
-
-* Styling
-    * Load Static
-* Authetication
-    * Validation
-* Multi App Project
-* Built-in Users
-* Built-in Admin and Authorization
 * Built-in Forms
 * ModelForms
 * Class Based Views (CBV)
     * Generic Views
-* Template Inheritance
-    * Django Template Language (revisit)
+* Styling
+    * Django Template Language
+    * Load Static
+    * Template Inheritance
+
+
+* Admin
+* Authetication
+    * Validation
+* Multi App Project
+* Built-in Users
 * Testing
     * Populating database with fake data (faker)
     * Coverage

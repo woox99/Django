@@ -11,7 +11,7 @@ def publisher_create(request):
     if request.method == 'POST':
         name = request.POST['name']
         publisher = Publisher.objects.create(name=name)
-        return redirect(reverse('app:publisher-detail', args=[publisher.pk]))
+        return redirect(publisher.get_absolute_url())
     return render(request, 'app/publisher/publisher_create.html')
 
 def publisher_detail(request, pk):
@@ -23,7 +23,7 @@ def publisher_update(request, pk):
     if request.method == 'POST':
         publisher.name = request.POST['name']
         publisher.save()
-        return redirect(reverse('app:publisher-detail', args=[publisher.pk]))
+        return redirect(publisher.get_absolute_url())
     return render(request, 'app/publisher/publisher_update.html', {'publisher':publisher})
 
 def publisher_delete(request, pk):
@@ -48,7 +48,7 @@ def book_create(request):
         if author_ids:
             authors = Author.objects.filter(pk__in=author_ids)
             book.authors.add(*authors)
-        return redirect(reverse('app:book-detail', args=[book.pk]))
+        return redirect(book.get_absolute_url())
     return render(request, 'app/book/book_create.html', context)
 
 def book_detail(request, pk):
@@ -63,7 +63,6 @@ def book_update(request, pk):
         'publishers' : Publisher.objects.all(),
         'authors' : Author.objects.all()
     }
-    print(context['book_authors_ids_list'])
     if request.method == 'POST':
         title = request.POST['title']
         publisher = Publisher.objects.get(pk=request.POST['publisher_id'])
@@ -73,7 +72,7 @@ def book_update(request, pk):
         if author_ids:
             authors = Author.objects.filter(pk__in=author_ids)
             book.authors.add(*authors)
-        return redirect(reverse('app:book-detail', args=[book.pk]))
+        return redirect(book.get_absolute_url())
     return render(request, 'app/book/book_update.html', context)
 
 def book_delete(request, pk):
@@ -89,7 +88,7 @@ def author_create(request):
     if request.method == 'POST':
         name = request.POST['name']
         author = Author.objects.create(name=name)
-        return redirect(reverse('app:author-detail', args=[author.pk]))
+        return redirect(author.get_absolute_url())
     return render(request, 'app/author/author_create.html')
     
 def author_detail(request, pk):
@@ -101,7 +100,7 @@ def author_update(request, pk):
     if request.method == 'POST':
         author.name = request.POST['name']
         author.save()
-        return redirect(reverse('app:author-detail', args=[author.pk]))
+        return redirect(author.get_absolute_url())
     return render(request, 'app/author/author_update.html', {'author':author})
 
 def author_delete(request, pk):
