@@ -1,6 +1,9 @@
 # CRUD References
 
-* <a href="https://docs.djangoproject.com/en/5.0/intro/tutorial02/" target="_blank">Documentation</a>
+* <a href="https://docs.djangoproject.com/en/5.0/topics/db/models/" target="_blank">Models Documentation</a>
+* <a href="https://docs.djangoproject.com/en/5.0/ref/models/fields/#field-types" target="_blank">Fields Types Reference</a>
+* <a href="https://docs.djangoproject.com/en/5.0/topics/db/queries/" target="_blank">Making Queries Documentation</a>
+* <a href="https://github.com/chrisdl/Django-QuerySet-Cheatsheet?tab=readme-ov-file" target="_blank">Cheatsheet for Django QuerySets</a>
 <!-- * <a href="" target="_blank">Template</a> -->
 
 Migrate database after setting up models to begin working with models
