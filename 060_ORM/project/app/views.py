@@ -47,7 +47,7 @@ def book_create(request):
         author_ids = request.POST.getlist('author_ids')
         if author_ids:
             authors = Author.objects.filter(pk__in=author_ids)
-            book.authors.add(*authors)
+            book.authors.set(authors)
         return redirect(book.get_absolute_url())
     return render(request, 'app/book/book_create.html', context)
 
@@ -71,7 +71,7 @@ def book_update(request, pk):
         author_ids = request.POST.getlist('author_ids')
         if author_ids:
             authors = Author.objects.filter(pk__in=author_ids)
-            book.authors.add(*authors)
+            book.authors.set(authors)
         return redirect(book.get_absolute_url())
     return render(request, 'app/book/book_update.html', context)
 
