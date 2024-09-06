@@ -10,10 +10,10 @@ def publisher_create(request):
     form = PublisherForm
     if request.method == 'POST':
         form = PublisherForm(request.POST)
-        # print(form) # prints the form element
+        # print(form) # prints the form html element
         if form.is_valid():
             name = form.cleaned_data['name']
-            publisher = Publisher.objects.create(name=name)
+            Publisher.objects.create(name=name)
         return redirect('app:index')
     return render(request, 'app/publisher_create.html', {'form':form})
 
@@ -23,7 +23,7 @@ def author_create(request):
         form = AuthorForm(request.POST)
         if form.is_valid():
             name = form.cleaned_data['name']
-            author = Author.objects.create(name=name)
+            Author.objects.create(name=name)
             return redirect('app:index')
     return render(request, 'app/author_create.html', {'form':form})
 
