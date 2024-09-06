@@ -20,12 +20,12 @@
     * SQLite
     * DB Browser
     * Shell
-
 * Related Objects ORM
     * OneToOne
     * OneToMany
     * ManyToMany
-    * get_absolute_url
+    * get_absolute_url 
+
 * Styling
     * Load Static
 * Authetication
