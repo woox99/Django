@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Books.com</h1>
+    <hr>
+
+    <h2>Are you sure you want to delete the Author {{author}}?</h2>
+    <form action="{% url 'app:author-delete' author.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Yes, I'm sure">
+        <a href="{% url 'app:author-detail' author.pk %}">Cancel</a>
+    </form>
+</body>
+</html>

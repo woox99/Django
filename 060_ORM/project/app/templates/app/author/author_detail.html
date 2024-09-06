@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Books.com</h1>
+    <hr>
+    <a href="{% url 'app:publisher-list' %}"><button>All Publishers</button></a>
+
+    <h2>{{author}}</h2>
+
+    <p>Books:</p>
+    {% for book in author.book_set.all %}
+    <li><a href="{% url 'app:book-detail' book.pk %}">{{book}}</a></li>
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'app:author-update' author.pk %}">Edit</a> |
+    <a href="{% url 'app:author-delete' author.pk %}">DELETE</a>
+</body>
+</html>
