@@ -12,11 +12,11 @@
 
     <h2>{{book}}</h2>
     
-    <p>Publisher: <a href="{% url 'app:publisher-detail' book.publisher.pk %}">{{book.publisher}}</a></p>
+    <p>Publisher: <a href="{{book.publisher.get_absolute_url}}">{{book.publisher}}</a></p>
     
     <p>Authors:</p>
     {% for author in book.authors.all %}
-    <li><a href="{% url 'app:author-detail' author.pk %}">{{author}}</a></li>
+    <li><a href="{{author.get_absolute_url}}">{{author}}</a></li>
     {% endfor %}
     
     <br>

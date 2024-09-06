@@ -15,10 +15,10 @@
     <a href="{% url 'app:author-create' %}"><button>Add Author</button></a>
     <h2>All Publishers</h2>
     {% for publisher in publishers %}
-    <p><strong><a href="{% url 'app:publisher-detail' publisher.pk %}">{{publisher}}</a></strong></p>
+    <p><strong><a href="{{publisher.get_absolute_url}}">{{publisher}}</a></strong></p>
     {% for book in publisher.book_set.all %}
     <ul>
-        <li><a href="{% url 'app:book-detail' book.pk %}">{{book}}</a></li>
+        <li><a href="{{book.get_absolute_url}}">{{book}}</a></li>
     </ul>
     {% endfor %}
     {% endfor %}

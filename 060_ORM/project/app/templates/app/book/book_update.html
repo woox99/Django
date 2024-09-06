@@ -40,7 +40,7 @@
         </select>
         
         <input type="submit" value="Save">
-        <a href="{% url 'app:book-detail' book.pk %}">Cancel</a>
+        <a href="{{book.get_absolute_url}}">Cancel</a>
     </form>
 </body>
 </html>

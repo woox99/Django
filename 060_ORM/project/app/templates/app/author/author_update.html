@@ -16,7 +16,7 @@
         <label for="name">Name</label>
         <input type="text" id="name" name="name" value="{{author}}">
         <input type="submit" value="Save">
-        <a href="{% url 'app:author-detail' author.pk %}">Cancel</a>
+        <a href="{{author.get_absolute_url}}">Cancel</a>
     </form>
 </body>
 </html>

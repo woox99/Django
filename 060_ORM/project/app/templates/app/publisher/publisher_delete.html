@@ -13,7 +13,7 @@
     <form action="{% url 'app:publisher-delete' publisher.pk %}" method="POST">
         {% csrf_token %}
         <input type="submit" value="Yes, I'm sure">
-        <a href="{% url 'app:publisher-detail' publisher.pk %}">Cancel</a>
+        <a href="{{publisher.get_absolute_url}}">Cancel</a>
     </form>
 </body>
 </html>
