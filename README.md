@@ -28,13 +28,12 @@
 * Built-in Forms
 * ModelForms
 * Class Based Views (CBV)
-    * Generic Views
+
+* Generic Views
 * Styling
     * Django Template Language
     * Load Static
     * Template Inheritance
-
-
 * Admin
 * Authetication
     * Validation

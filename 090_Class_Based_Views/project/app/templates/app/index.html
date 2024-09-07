@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Books.com</h1>
+    <hr>
+
+    <a href="{% url 'app:publisher-create' %}"><button>Add Publisher</button></a>
+    <a href="{% url 'app:author-create' %}"><button>Add Author</button></a>
+    <a href="{% url 'app:book-create' %}"><button>Add Book</button></a>
+
+    <h2>Publishers</h2>
+    {% for publisher in publishers %}
+    <p>{{publisher}}</p>
+    <ul>
+        {% for book in publisher.book_set.all %}
+        <li>{{book}}</li>
+        <ul>
+            {% for author in book.authors.all %}
+            <li>{{author}}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+</html>
