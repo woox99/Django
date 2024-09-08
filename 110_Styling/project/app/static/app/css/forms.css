@@ -1,0 +1,22 @@
+/* class names assigned in forms.py file */
+.publisher-name-input{
+    background-color: rgb(255, 214, 214);
+    margin-bottom: 10px;
+}
+
+.author-name-input-{
+    background-color: rgb(190, 200, 251);
+    margin-bottom: 10px;
+}
+
+.book-title-input{
+    background-color: rgb(190, 251, 202);
+    margin-bottom: 10px;
+}
+.book-publisher-input{
+    background-color: rgb(190, 251, 202);
+    margin-bottom: 10px;
+}
+.book-authors-input{
+    background-color: rgb(190, 251, 202);
+}

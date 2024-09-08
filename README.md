@@ -28,8 +28,8 @@
 * Form Class
 * Model Forms
 * Class Based Views
-
 * Generic Views
+
 * Styling
     * Django Template Language
     * Load Static

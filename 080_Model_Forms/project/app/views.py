@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import *
+from app.models import *
+from app.forms import *
 
 def index(request):
     publishers = Publisher.objects.all()
