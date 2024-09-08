@@ -25,9 +25,9 @@
     * OneToMany
     * ManyToMany
     * get_absolute_url 
-* Built-in Forms
-* ModelForms
-* Class Based Views (CBV)
+* Form Class
+* Model Forms
+* Class Based Views
 
 * Generic Views
 * Styling
