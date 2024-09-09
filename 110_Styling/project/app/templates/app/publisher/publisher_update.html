@@ -1,27 +1,17 @@
 {% extends 'app/base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    {% load static %}
-    {% block css %}
-    <link rel="stylesheet" href="{% static 'app/css/forms.css' %}">
-    {% endblock %}
-</head>
-<body>
-    {% block content %}
-    
-    <h2>Edit Publisher</h2>
-    <form action="{% url 'app:publisher-update' publisher.id %}" method="post">
-        {% csrf_token %}
-        {{form.as_p}}
 
-        <input type="submit" value="Save">
-        <a href="{{publisher.get_absolute_url}}">Cancel</a>
-    </form>
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/forms.css' %}">
+{% endblock %}
 
-    {% endblock %}
-</body>
-</html>
+{% block content %}
+
+<h2>Edit Publisher</h2>
+<form action="{% url 'app:publisher-update' publisher.id %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save">
+    <a href="{{publisher.get_absolute_url}}">Cancel</a>
+</form>
+{% endblock %}
