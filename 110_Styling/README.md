@@ -28,7 +28,14 @@ class PublisherForm(forms.Form):
 ```
 
 ### Template Inheritance
+
 * <a href="https://docs.djangoproject.com/en/5.1/ref/templates/language/#template-inheritance" target="_blank">Template Inheritance Documentation</a>
 
-        <!-- Extends tag must be the first html in the document -->
-        {% extends 'base_file_name.html' %}
+```
+<!-- Extends tag must be the first text in the document -->
+{% extends 'base_file_name.html' %}
+
+{% block block_name %}
+<!-- block content here -->
+{% endblock %}
+```

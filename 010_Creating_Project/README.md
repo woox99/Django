@@ -1,7 +1,7 @@
 # Creating Project Reference
 <!-- * <a href="" target="_blank">Template</a> -->
 
-## Steps
+### `Steps`
 
 1. Create a new directoy with project name
 

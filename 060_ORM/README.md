@@ -7,7 +7,7 @@
 * <a href="https://docs.djangoproject.com/en/5.1/ref/models/instances/#get-absolute-url" target="_blank">get_absolute_url()</a>
 <!-- * <a href="" target="_blank">Template</a> -->
 
-Migrate database after setting up models to begin working with models
+`NOTE:` Migrate database after setting up models to begin working with models
 
     py manage.py makemigrations
     py manage.py migrate

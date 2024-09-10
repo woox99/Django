@@ -4,7 +4,7 @@
 * <a href="https://docs.djangoproject.com/en/5.1/ref/forms/fields/#module-django.forms.fields" target="_blank">Form Fields</a>
 <!-- * <a href="" target="_blank">Template</a> -->
 
-#### Create `forms.py` file in `project/app` directory
+`NOTE:` Create `forms.py` file in `project/app` directory
 
 ```py
 from django import forms

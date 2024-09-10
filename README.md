@@ -1,16 +1,11 @@
 # Lesson Index
 * Getting Started and Installation
-    * Overview
-    * Prerequisites
-    * Installation
+    * <a href="https://docs.djangoproject.com/en/5.0/intro/install/" target="_blank">Quick Install Guide</a>
 * Creating Django Project
-    * App Configuration
-    * Starting Development Server
-* Forms
+* Basics 
+    * Forms 
     * Views
     * URL Patterns
-    * Templates
-    * DTL Variables
 * Session Management
 * Request Handling
     * URL Parameters (Path Variables)
@@ -18,7 +13,6 @@
 * CRUD
     * Models
     * SQLite
-    * DB Browser
     * Shell
 * Related Objects ORM
     * OneToOne
@@ -29,16 +23,15 @@
 * Model Forms
 * Class Based Views
 * Generic Views
-
 * Styling
-    * Django Template Language
     * Load Static
     * Template Inheritance
+
 * Admin
-* Authetication
+* Users
+    * Authetication
     * Validation
 * Multi App Project
-* Built-in Users
 * Testing
     * Populating database with fake data (faker)
     * Coverage
