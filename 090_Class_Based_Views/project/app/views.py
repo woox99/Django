@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from app.models import *
+from app.forms import *
 
 class Index(View):
     def get(self, request):
