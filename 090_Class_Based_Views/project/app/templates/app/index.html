@@ -15,7 +15,12 @@
 
     <h2>Publishers</h2>
     {% for publisher in publishers %}
-    <p>{{publisher}}</p>
+    <div>
+        {{publisher}} |
+        <a href="{% url 'app:publisher-detail' publisher.pk %}">View</a> |
+        <a href="{% url 'app:publisher-update' publisher.pk %}">Edit</a> |
+        <a href="{% url 'app:publisher-delete' publisher.pk %}">Delete</a>
+    </div>
     <ul>
         {% for book in publisher.book_set.all %}
         <li>{{book}}</li>
