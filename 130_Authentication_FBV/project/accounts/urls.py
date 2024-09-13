@@ -3,14 +3,9 @@ from . import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('register/', views.register, name='register'),
-    path(
-        "change-password/",
-        auth_views.PasswordChangeView.as_view(
-            template_name="registration/password_change.html", # direct render to custom template
-            success_url=reverse_lazy('password-change-success'), # redirect to custom url pattern
-        ),
-        name='password-change'
-    ),
-    path('change-password/done/', views.password_change_success, name='password-change-success'),
+    path('accounts/login/', views.user_login, name='login'),
+    path('register/', views.user_register, name='register'),
+    path('logout/', views.user_logout, name='logout'),
+    path('change-password/', views.password_change, name='password-change'),
+    path('change-password/successful/', views.password_change_success, name='password-change-success'),
 ]

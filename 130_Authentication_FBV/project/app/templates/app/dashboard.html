@@ -5,7 +5,7 @@
 {% if user.is_authenticated %}
 
 <p>Welcome, {{user}}!</p>
-<form action="{% url 'logout' %}?next={% url 'app:index' %}" method="POST">
+<form action="{% url 'logout' %}" method="POST">
     {% csrf_token %}
     <button type="submit">Logout</button>
 </form>

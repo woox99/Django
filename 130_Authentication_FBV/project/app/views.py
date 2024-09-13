@@ -15,7 +15,7 @@ def dashboard(request):
 @login_required # displays 404 message if user is not logged in
 def book_create(request):
     if request.method == 'POST':
-        form = BookForm(request.POST)
+        form = BookForm(data=request.POST)
         if form.is_valid():
             book = form.save(commit=False)
             book.owner = request.user
@@ -36,6 +36,7 @@ def book_delete(request, pk):
     return render(request, 'app/book/delete.html', {'book':book})
 
 
+@login_required 
 def book_detail(request, pk):
     book = get_object_or_404(Book, pk=pk)
     return render(request, 'app/book/detail.html', {'book':book})
@@ -47,7 +48,7 @@ def book_update(request, pk):
         return redirect('app:dashboard')
     
     if request.method == 'POST':
-        form = BookForm(request.POST, instance=book)
+        form = BookForm(data=request.POST, instance=book)
         if form.is_valid():
             form.save()
             return redirect('app:book-detail', pk=pk)
