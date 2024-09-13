@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+
+{% block content %}
+
+<h3>Edit {{book}}:</h3>
+<form action="{% url 'app:book-update' book.pk %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Save Changes">
+    <a href="{% url 'app:dashboard' %}">Cancel</a>
+</form>
+
+{% endblock %}

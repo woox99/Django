@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+
+{% block content %}
+
+<h3>Add Book:</h3>
+<form action="{% url 'app:book-create' %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Add Book">
+</form>
+
+{% endblock %}

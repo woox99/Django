@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<h3>Title: {{book}}</h3>
+<p>Owner: {{book.owner}}</p>
+
+<a href="{% url 'app:dashboard' %}"><button>All Books</button></a>
+
+{% endblock %}

@@ -27,7 +27,6 @@ class PublisherForm(ModelForm):
 
 ### `Backlog:`
 
-* Make view, delete, and update views
 
 
 
