@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{% url 'login' %}?next={{next}}" method="POST">
+    <form action="{% url 'accounts:login' %}?next={{next}}" method="POST">
     {% csrf_token %}
     {{form}}
     <input type="submit" value="Login">

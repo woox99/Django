@@ -9,6 +9,7 @@ class PublisherList(ListView):
     context_object_name = 'publishers'
     template_name = 'app/index.html'
 
+
 class PublisherCreate(CreateView):
     model = Publisher
     fields = ['name']
@@ -17,9 +18,11 @@ class PublisherCreate(CreateView):
     def get_success_url(self):
         return reverse_lazy('app:publisher-detail', kwargs={'pk':self.object.pk})
 
+
 class PublisherDetail(DetailView):
     model = Publisher
     template_name = 'app/publisher/publisher_detail.html'
+
 
 class PublisherUpdate(UpdateView):
     model = Publisher
@@ -28,6 +31,7 @@ class PublisherUpdate(UpdateView):
 
     def get_success_url(self):
         return reverse_lazy('app:publisher-detail', kwargs={'pk':self.object.pk})
+
 
 class PublisherDelete(DeleteView):
     model = Publisher

@@ -41,10 +41,10 @@ def password_change(request):
         form = PasswordChangeForm(data=request.POST, user=request.user)
         if form.is_valid():
             form.save()
-            return redirect('password-change-success') 
+            return redirect('accounts:password-change-done') 
     else:
         form = PasswordChangeForm(user=request.user)
     return render(request, 'registration/password_change.html', {'form':form})
 
-def password_change_success(request):
+def password_change_done(request):
     return render(request, 'registration/password_change_success.html')

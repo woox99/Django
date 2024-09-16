@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<a href="{% url 'login' %}"><button>Login</button></a>
-<a href="{% url 'register' %}"><button>Sign Up</button></a>
+<a href="{% url 'accounts:login' %}"><button>Login</button></a>
+<a href="{% url 'accounts:register' %}"><button>Sign Up</button></a>
 <a href="{% url 'app:dashboard' %}"><button>Continue as Guest</button></a>
 
 {% endblock %}
