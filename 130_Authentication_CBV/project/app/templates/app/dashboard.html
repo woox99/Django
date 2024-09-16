@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<p>Welcome {{user}}!</p>
+
+<form action="{% url 'accounts:logout' %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Logout">
+</form>
+
+<br>
+<a href="{% url 'app:index' %}"><button>Back</button></a>
+<a href="{% url 'accounts:password-change' %}"><button>Change Password</button></a>
+<a href="{% url 'app:book-create' %}"><button>Add Book</button></a>
+
+{% else %}
+
+<p>You are currently visiting the site as a Guest.</p>
+
+<a href="{% url 'accounts:login' %}"><button>Login</button></a>
+<a href="{% url 'accounts:register' %}"><button>Signup</button></a>
+<a href="{% url 'app:index' %}"><button>Back</button></a>
+
+{% endif %}
+
+<p>Books:</p>
+
+<table>
+    <thead>
+        <tr>
+            <td style="border: 1px solid black; padding: 0px 30px;">ID</td>
+            <td style="border: 1px solid black; padding: 0px 30px;">Title</td>
+            <td style="border: 1px solid black; padding: 0px 30px;">Owner</td>
+            <td style="border: 1px solid black; padding: 0px 30px;">Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td style="border: 1px solid black; padding: 0px 30px;">{{book.pk}}</td>
+            <td style="border: 1px solid black; padding: 0px 30px;">{{book.title}}</td>
+            <td style="border: 1px solid black; padding: 0px 30px;">{{book.owner}}</td>
+            <td style="border: 1px solid black; padding: 0px 30px;">
+                <a href="{% url 'app:book-detail' book.pk %}"><button>View</button></a>
+                {% if book.owner == user %}
+                <a href="{% url 'app:book-update' book.pk %}"><button>Edit</button></a>
+                <a href="{% url 'app:book-delete' book.pk %}"><button>Delete</button></a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
