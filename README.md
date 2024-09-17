@@ -3,12 +3,11 @@
     * <a href="https://docs.djangoproject.com/en/5.0/intro/install/" target="_blank">Quick Install Guide</a>
 * Creating Django Project
 * Basics 
-    * Forms 
-    * Views
     * URL Patterns
+    * Views
+    * Minimal Forms 
 * Session Management
-* Request Handling
-    * URL Parameters (Path Variables)
+* URL Parameters
     * Query Parameters
 * CRUD
     * Models
@@ -26,26 +25,25 @@
 * Styling
     * Load Static
     * Template Inheritance
-
 * Admin
-* Users
-    * Authetication
-    * Validation
-* Multi App Project
+* Authentication
+    * CBV
+    * FBV
+    * Multi App Project
+* API
+    * Django REST Framework
+
+
 * Testing
     * Populating database with fake data (faker)
     * Coverage
-* API
-    * Django REST Framework
-    * Connecting React
-* Connecting MySQL
-* AWS Deployment
-
-#### Extras
 * Slug
 * Pagination
+* File Upload
+* Connecting MySQL
+* Connect React
+* AWS Deployment
 
-<br>
 
 # Common Commands
 
