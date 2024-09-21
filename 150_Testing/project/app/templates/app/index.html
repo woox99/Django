@@ -1,0 +1,34 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<a href="{% url 'app:book-create' %}"><button>Add Book</button></a>
+
+
+<p>Books:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th style="border: 1px solid black; padding: 0px 20px;">ID</th>
+            <th style="border: 1px solid black; padding: 0px 20px;">Title</th>
+            <th style="border: 1px solid black; padding: 0px 20px;">Publisher</th>
+            <th style="border: 1px solid black; padding: 0px 20px;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td style="border: 1px solid black; padding: 0px 20px;">{{book.id}}</td>
+            <td style="border: 1px solid black; padding: 0px 20px;">{{book}}</td>
+            <td style="border: 1px solid black; padding: 0px 20px;">{{book.publisher}}</td>
+            <td style="border: 1px solid black; padding: 0px 20px;">
+                <a href="{% url 'app:book-detail' book.pk %}">View</a> |
+                <a href="{% url 'app:book-delete' book.pk %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
