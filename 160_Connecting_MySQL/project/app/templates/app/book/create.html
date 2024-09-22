@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Add Book">
+    <a href="{% url 'app:index' %}">Cancel</a>
+</form>
+
+{% endblock %}

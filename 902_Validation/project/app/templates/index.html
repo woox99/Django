@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .messages{
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="messages">    
+        {% for message in messages %}    
+            <li >{{ message }}</li>    
+        {% endfor %}
+    </ul>
+    <h1>Register</h1>
+    <form action="/register" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="">name</label>
+            <input type="text" name="name" value="{{name}}">
+        </div>
+        <div>
+            <label for="">email</label>
+            <input type="text" name="email" value="{{email}}">
+        </div>
+        <div>
+            <label for="">password</label>
+            <input type="text" name="password" value="{{password}}">
+        </div>
+        <div>
+            <label for="">confirm password</label>
+            <input type="text" name="confirm" value="{{confirm}}">
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <h1>Sign In</h1>
+    <form action="/login" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="">email</label>
+            <input type="text" name="email" value="{{email}}">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="text" name="password" value="{{password}}">
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
