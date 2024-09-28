@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<h3>{{book}}</h3>
+<p>Publisher: {{book.publisher}}</p>
+<p>Slug: {{book.slug}}</p>
+
+<a href="{% url 'app:index' %}"><button>Back</button></a>
+
+{% endblock %}

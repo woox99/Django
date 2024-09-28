@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<a href="{% url 'app:book-create' %}"><button>Add Book</button></a>
+
+{% for book in books %}
+<p>Title: <a href="{{book.get_absolute_url}}">{{book}}</a></p>
+<p>Publisher: {{book.publisher}}</p>
+<p>Slug: {{book.slug}}</p>
+<hr>
+{% endfor %}
+
+{% endblock %}
