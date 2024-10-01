@@ -2,7 +2,7 @@
 * Getting Started and Installation
     * <a href="https://docs.djangoproject.com/en/5.0/intro/install/" target="_blank">Quick Install Guide</a>
 * Creating Django Project
-    * <a href="https://github.com/woox99/Creating_Django_Project_Tutorial" target="_blank">Creating Project Walkthrough</a>
+    * <a href="https://github.com/woox99/Django/tree/main/010_Creating_Project" target="_blank">Creating Project Walkthrough</a>
 * Basics 
     * URL Patterns
     * Views
