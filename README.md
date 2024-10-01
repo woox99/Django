@@ -2,6 +2,7 @@
 * Getting Started and Installation
     * <a href="https://docs.djangoproject.com/en/5.0/intro/install/" target="_blank">Quick Install Guide</a>
 * Creating Django Project
+    * <a href="https://github.com/woox99/Creating_Django_Project_Tutorial" target="_blank">Creating Project Walkthrough</a>
 * Basics 
     * URL Patterns
     * Views
@@ -25,6 +26,7 @@
 * Styling
     * Load Static
     * Template Inheritance
+    * Built-in Form Element Classes
 * Admin
 * Authentication
     * CBV
@@ -32,18 +34,18 @@
     * Multi App Project
 * API
     * Django REST Framework
-
-
 * Testing
-    * Populating database with fake data (faker)
     * Coverage
-* Slug
-* Pagination
-* File Upload
 * Connecting MySQL
-* Connect React
 * AWS Deployment
+    * <a href="https://github.com/woox99/Django-Deployment-Tutorial" target="_blank">AWS Deployment Walkthrough</a>
 
+# Extras
+
+* Faker
+* Pagination
+* Slug Field
+* Validation
 
 # Common Commands
 
