@@ -34,6 +34,7 @@
     * Multi App Project
 * API
     * Django REST Framework
+    * Model Serializers
 * Testing
     * Coverage
 * Connecting MySQL
@@ -46,6 +47,12 @@
 * Pagination
 * Slug Field
 * Validation
+
+# Backlog
+
+* Connecting React
+* Signals
+* Token Authentication
 
 # Common Commands
 
