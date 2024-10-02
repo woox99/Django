@@ -1,4 +1,3 @@
-from django.shortcuts import render, get_list_or_404
 from django.urls import reverse_lazy
 
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -47,9 +46,11 @@ class AuthorCreate(CreateView):
     def get_success_url(self):
         return reverse_lazy('app:author-detail', kwargs={'pk':self.object.pk})
     
+
 class AuthorDetail(DeleteView):
     model = Author
     template_name = 'app/author/author_detail.html'
+
 
 class AuthorUpdate(UpdateView):
     model = Author
@@ -59,6 +60,7 @@ class AuthorUpdate(UpdateView):
     def get_success_url(self):
         return reverse_lazy('app:author-detail', kwargs={'pk':self.object.pk})
     
+
 class AuthorDelete(DeleteView):
     model = Author
     template_name = 'app/author/author_delete.html'
@@ -73,6 +75,7 @@ class BookCreate(CreateView):
     def get_success_url(self):
         return reverse_lazy('app:book-detail', kwargs={'pk':self.object.pk})
 
+
 class BookDetail(DetailView):
     model = Book
     template_name = 'app/book/book_detail.html'
@@ -84,6 +87,7 @@ class BookUpdate(UpdateView):
     
     def get_success_url(self):
         return reverse_lazy('app:book-detail', kwargs={'pk':self.object.pk})
+
 
 class BookDelete(DeleteView):
     model = Book
