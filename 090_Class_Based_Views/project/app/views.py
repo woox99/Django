@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse_lazy
 from django.views import View
 from app.models import *
 from app.forms import *
@@ -40,7 +39,6 @@ class PublisherDelete(View):
         return redirect('app:index')
 
 
-
 class PublisherUpdate(View):
     def get(self, request, pk):
         publisher = get_object_or_404(Publisher, pk=pk)
@@ -62,6 +60,7 @@ class PublisherUpdate(View):
             'publisher' : publisher,
         }
         return render(request, 'app/publisher/publisher_update.html', context)
+
 
 class AuthorCreate(View):
     def get(self, request):
