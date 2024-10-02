@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse
 
 from .models import Publisher, Author, Book
 
@@ -34,7 +33,7 @@ def publisher_delete(request, pk):
     publisher = get_object_or_404(Publisher, pk=pk)
     if request.method == 'POST':
         publisher.delete()
-        return redirect(reverse('app:publisher-list'))
+        return redirect('app:publisher-list')
     return render(request, 'app/publisher/publisher_delete.html', {'publisher':publisher})
 
 
@@ -89,7 +88,7 @@ def book_delete(request, pk):
     if request.method == 'POST':
         book = Book.objects.get(pk=pk)
         book.delete()
-        return redirect(reverse('app:publisher-list'))
+        return redirect('app:publisher-list')
     return render(request, 'app/book/book_delete.html', {'book':book})
 
 
@@ -119,5 +118,5 @@ def author_delete(request, pk):
     author = get_object_or_404(Author, pk=pk)
     if request.method == 'POST':
         author.delete()
-        return redirect(reverse('app:publisher-list'))
+        return redirect('app:publisher-list')
     return render(request, 'app/author/author_delete.html', {'author':author})
