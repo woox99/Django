@@ -15,6 +15,10 @@ INSTALLED_APPS = [
 ]
 ```
 
+```
+pip install djangorestframework
+```
+
 
 
 
