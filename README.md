@@ -58,8 +58,8 @@
 
 #### Virtual Envrionment
 
-    py -m venv projectenv
-    projectenv\scripts\activate
+    py -m venv venv
+    venv\scripts\activate
 
 #### Django
 

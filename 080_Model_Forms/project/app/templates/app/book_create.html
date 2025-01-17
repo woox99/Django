@@ -9,12 +9,29 @@
     <h1>Books.com</h1>
     <hr>
 
-    <form action="{% url 'app:book-create' %}" method="POST">
+    <form action="" method="POST">
         {% csrf_token %}
-        {{form}}
-
-        <br>
-        <input type="submit" value="Create">
+        <div>
+            Title:
+            <input type="text" name="title">
+        </div>
+        <div>
+            Publisher:
+            <select name="publisher" id="">
+                {% for publisher in publishers %}
+                <option value="{{publisher.pk}}">{{publisher}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            Author:
+            <select name="authors" id="" multiple>
+                {% for author in authors %}
+                <option value="{{author.pk}}">{{author}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit">Save</button>
     </form>
 </body>
 </html>

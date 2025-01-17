@@ -25,10 +25,11 @@ def author_create(request):
     return render(request, 'app/author_create.html', {'form':form})
 
 def book_create(request):
-    form = BookForm
+    publishers = Publisher.objects.all()
+    authors = Author.objects.all()
     if request.method == 'POST':
         book = BookForm(request.POST)
         if book.is_valid():
             book.save()
         return redirect('app:index')
-    return render(request, 'app/book_create.html', {'form':form})
+    return render(request, 'app/book_create.html', {'publishers':publishers, 'authors':authors})
